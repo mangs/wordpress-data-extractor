@@ -1,0 +1,31 @@
+{
+  "name": "wordpress-data-extractor",
+  "version": "1.0.0",
+  "author": "Eric L. Goldstein",
+  "description": "Extract data from a WordPress site export using native async/await",
+  "homepage": "https://github.com/mangs/wordpress-data-extractor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mangs/wordpress-data-extractor.git"
+  },
+  "license": "LGPL-3.0-only",
+  "engines": {
+    "node": ">= 12.4",
+    "npm": ">= 6.9"
+  },
+  "scripts": {
+    "postinstall": "npm run validate:environment",
+    "prestart": "npm run validate:environment",
+    "start": "bin/extract-data.js",
+    "pretest": "npm run validate:environment",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate:environment:versions": "scripts/validate-versions.js",
+    "validate:environment": "check-engine && npm run validate:environment:versions"
+  },
+  "dependencies": {
+    "xml-js": "1.6.11"
+  },
+  "devDependencies": {
+    "check-engine": "1.8.0"
+  }
+}
