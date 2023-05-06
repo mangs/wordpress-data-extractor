@@ -26,6 +26,6 @@
     "xml-js": "1.6.11"
   },
   "devDependencies": {
-    "check-engine": "1.8.0"
+    "check-engine": "1.11.0"
   }
 }
